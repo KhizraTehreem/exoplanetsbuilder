@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build-a-Planet: Space Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+</head>
+<body><div class="starry-background">
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>  
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>   
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>  
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>   
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>
+    <div class="star"></div>        <div class="star"></div>  
+    
+</div>
+    <div class="game-container">
+        <h1 class="game-title">Build Your Own Exoplanet!</h1>
+        <p class="intro-text">
+            Welcome to the space exploration adventure! Help our alien friend create a perfect exoplanet by adjusting its size, distance from the star, and atmosphere. 
+            Use the controls below to build your planet and check if it's habitable!
+        </p>
+        <div class="planet-star-container">
+            <div class="planet-display">
+                <canvas id="planetCanvas" width="250" height="250"></canvas>
+                <p><span id="planetSizeValue">5000</span> km </p>
+
+            </div>
+            
+            <div class="star-display">
+                <canvas id="starCanvas" width="150" height="150"></canvas>
+                <p><span id="distanceText">1</span> </p>
+            </div>
+        </div>
+        <img src="alien.avif" alt="Alien Friend" class="alien">
+
+        <div class="controls">
+            <h2>Planet Creation Controls</h2>
+            <label for="planetSize">Planet Size:</label>
+            <input type="range" id="planetSize" min="1000" max="10000" step="500" value="5000">
+            <span id="planetSizeValue">5000</span> km <br>
+
+            <label for="distanceFromStar">Distance from Star:</label>
+            <input type="range" id="distanceFromStar" min="0.1" max="5" step="0.1" value="1">
+            <span id="distanceValue">1</span>  <br>
+
+            <label for="atmosphere">Atmosphere Thickness:</label>
+            <input type="range" id="atmosphere" min="0" max="100" step="5" value="50">
+            <span id="atmosphereValue">50</span> % <br>
+
+             <button id="checkHabitability"> Check Habitability 🌍</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

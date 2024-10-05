@@ -1,0 +1,192 @@
+/* General layout and responsive design */
+body {
+    background-color: #000000;
+    font-style: "cursive";    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: #1d1e22;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+h1, h2 {
+    color: rgb(255, 0, 238);
+}
+
+.intro-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.planet-star-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.planet-display, .star-display {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.planet-display canvas {
+    width: 250px;
+    height: 250px;
+}
+
+.alien {
+    position: absolute;
+    top: 160px; /* Adjusted position */
+    right: -80px;
+    width: 120px; /* Adjusted size */
+    height: 20%;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.star-display canvas {
+    width: 200px;
+    height: 200px;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff8a50;
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+/* Starry background code unchanged */
+
+@media (max-width: 768px) {
+    .game-container {
+        width: 95%;
+    }
+
+    .alien {
+        width: 100px; /* Further adjust alien size for smaller screens */
+        right: -40px;
+    }
+
+    .planet-display canvas, .star-display canvas {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+
+/* stars background */
+
+
+.starry-background {
+    position: fixed; /* Cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white; /* Star color */
+    opacity: 0; /* Start with stars hidden */
+    animation: twinkle 1.5s infinite; /* Animation for twinkling effect */
+}
+
+/* Star positioning */
+.star:nth-child(1)  { top: 10%; left: 5%; width: 2px; height: 2px; animation-delay: 0s; }
+.star:nth-child(2)  { top: 30%; left: 90%; width: 3px; height: 3px; animation-delay: 0.5s; }
+.star:nth-child(3)  { top: 70%; left: 20%; width: 1px; height: 1px; animation-delay: 1s; }
+.star:nth-child(4)  { top: 50%; left: 75%; width: 4px; height: 4px; animation-delay: 1.5s; }
+.star:nth-child(5)  { top: 15%; right: 15%; width: 2.5px; height: 2.5px; animation-delay: 2s; }
+.star:nth-child(6)  { top: 80%; left: 35%; width: 2.5px; height: 2.5px; animation-delay: 0.7s; }
+.star:nth-child(7)  { top: 25%; right: 30%; width: 2.5px; height: 2.5px; animation-delay: 0.9s; }
+.star:nth-child(8)  { top: 90%; left: 40%; width: 2.5px; height: 2.5px; animation-delay: 1.2s; }
+.star:nth-child(9)  { top: 60%; left: 70%; width: 2.5px; height: 2.5px; animation-delay: 1.4s; }
+.star:nth-child(10) { top: 40%; right: 10%; width: 2.5px; height: 2.5px; animation-delay: 1.6s; }
+.star:nth-child(11) { top: 35%; left: 25%; width: 2.5px; height: 2.5px; animation-delay: 1.8s; }
+.star:nth-child(12) { top: 55%; left: 15%; width: 2.5px; height: 2.5px; animation-delay: 2s; }
+.star:nth-child(13) { top: 20%; right: 40%; width: 2.5px; height: 2.5px; animation-delay: 0.6s; }
+.star:nth-child(14) { top: 75%; left: 10%; width: 2.5px; height: 2.5px; animation-delay: 0.8s; }
+.star:nth-child(15) { top: 65%; right: 25%; width: 2.5px; height: 2.5px; animation-delay: 1.3s; }
+.star:nth-child(16) { top: 45%; left: 55%; width: 2.5px; height: 2.5px; animation-delay: 1.5s; }
+.star:nth-child(17) { top: 85%; left: 80%; width: 2.5px; height: 2.5px; animation-delay: 0.4s; }
+.star:nth-child(18) { top: 30%; right: 5%; width: 2.5px; height: 2.5px; animation-delay: 0.7s; }
+.star:nth-child(19) { top: 40%; left: 90%; width: 2.5px; height: 2.5px; animation-delay: 1.1s; }
+.star:nth-child(20) { top: 55%; left: 60%; width: 2.5px; height: 2.5px; animation-delay: 0.3s; }
+.star:nth-child(21) { top: 5%; right: 20%; width: 2px; height: 2px; animation-delay: 0.5s; }
+.star:nth-child(22) { top: 35%; left: 25%; width: 3px; height: 3px; animation-delay: 0.9s; }
+.star:nth-child(23) { top: 75%; left: 55%; width: 1px; height: 1px; animation-delay: 1.4s; }
+.star:nth-child(24) { top: 80%; left: 75%; width: 4px; height: 4px; animation-delay: 1.8s; }
+.star:nth-child(25) { top: 12%; right: 15%; width: 2.5px; height: 2.5px; animation-delay: 0.6s; }
+.star:nth-child(26) { top: 50%; left: 35%; width: 2.5px; height: 2.5px; animation-delay: 1.2s; }
+.star:nth-child(27) { top: 15%; left: 30%; width: 2.5px; height: 2.5px; animation-delay: 0.4s; }
+.star:nth-child(28) { top: 65%; left: 20%; width: 2.5px; height: 2.5px; animation-delay: 0.8s; }
+.star:nth-child(29) { top: 20%; right: 40%; width: 2.5px; height: 2.5px; animation-delay: 0.5s; }
+.star:nth-child(30) { top: 25%; left: 75%; width: 2.5px; height: 2.5px; animation-delay: 1.0s; }
+.star:nth-child(31) { top: 72%; right: 15%; width: 2.5px; height: 2.5px; animation-delay: 1.5s; }
+.star:nth-child(32) { top: 33%; left: 90%; width: 2.5px; height: 2.5px; animation-delay: 0.9s; }
+.star:nth-child(33) { top: 60%; right: 10%; width: 2.5px; height: 2.5px; animation-delay: 0.6s; }
+.star:nth-child(34) { top: 50%; left: 65%; width: 2.5px; height: 2.5px; animation-delay: 0.7s; }
+.star:nth-child(35) { top: 78%; left: 55%; width: 2.5px; height: 2.5px; animation-delay: 1.0s; }
+.star:nth-child(36) { top: 48%; right: 25%; width: 2.5px; height: 2.5px; animation-delay: 1.8s; }
+.star:nth-child(37) { top: 39%; left: 25%; width: 2.5px; height: 2.5px; animation-delay: 1.2s; }
+.star:nth-child(38) { top: 44%; right: 30%; width: 2.5px; height: 2.5px; animation-delay: 0.9s; }
+.star:nth-child(39) { top: 28%; left: 15%; width: 2.5px; height: 2.5px; animation-delay: 1.5s; }
+.star:nth-child(40) { top: 10%; left: 50%; width: 2.5px; height: 2.5px; animation-delay: 0.6s; }
+.star:nth-child(41) { top: 33%; right: 5%; width: 2.5px; height: 2.5px; animation-delay: 0.8s; }
+.star:nth-child(42) { top: 75%; left: 85%; width: 2.5px; height: 2.5px; animation-delay: 0.4s; }
+.star:nth-child(43) { top: 65%; left: 95%; width: 2.5px; height: 2.5px; animation-delay: 1.4s; }
+.star:nth-child(44) { top: 20%; left: 5%; width: 2.5px; height: 2.5px; animation-delay: 0.5s; }
+.star:nth-child(45) { top: 15%; right: 35%; width: 2.5px; height: 2.5px; animation-delay: 1.3s; }
+.star:nth-child(46) { top: 90%; left: 80%; width: 2.5px; height: 2.5px; animation-delay: 1.1s; }
+.star:nth-child(47) { top: 25%; left: 35%; width: 2.5px; height: 2.5px; animation-delay: 1.9s; }
+
+
+/* Add more stars with varying positions and sizes if needed */
+
+/* Twinkling animation */
+@keyframes twinkle {
+    0%, 20% { opacity: 0.5; } /* Faint visibility */
+    50% { opacity: 2; } /* Full visibility */
+    100% { opacity: 0; } /* Fade out */
+}
